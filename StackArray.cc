@@ -1,5 +1,6 @@
 #include "StackArray.h"
 #include <iostream>
+#include "assert.h" //lib assertions
 template <typename T>
 void StackArray<T>::push(T e)
 {
