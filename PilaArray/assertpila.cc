@@ -14,5 +14,4 @@ StackArray<int>x(3);
   x.empty();
 
   return 0;
-    return 0;
 }
