@@ -7,7 +7,7 @@ StackArray<T>::StackArray(int n)
   size = n;
   data = new T[size];
   sp = data;
-  //assert(size > 0 && data != nullptr);
+  //assert(size > 0 );
 }
 
 template <typename T>
@@ -35,9 +35,9 @@ T StackArray<T>::top()
 {
   int numElem = sp - data;
   assert(numElem > 0);
-  assert(size > 0 && data != nullptr);
+  assert(data != nullptr);
   return *(sp - 1);
-  //assert(*(sp-1)==T[size])) 
+  //assert(*(sp-1)==size)) 
 }
 
 template <typename T>
@@ -67,5 +67,5 @@ void StackArray<T>::resize()
 
   delete[] olddata;
   assert(size == newsize);
-  assert(size > 0 && data != nullptr);
+  
 }
