@@ -1,5 +1,4 @@
 #include "StackArray.h"
-#include <iostream>
 #include "assert.h" //lib assertions
 template <typename T>
 void StackArray<T>::push(T e)
@@ -9,18 +8,23 @@ void StackArray<T>::push(T e)
     resize();
   *sp = e;
   sp++;
- // assert(e==*sp); 
+  assert(*(data+numElem) == e );
+  assert(size > 0 && data != nullptr); 
 }
 
 template <typename T>
 void StackArray<T>::pop(){ 
-  // assert(!empty()); 
+  assert(numElem > 0);
+  assert(size > 0 && data != nullptr);
   sp--; 
   }
 
 template <typename T>
 T StackArray<T>::top()
 {
+  int numElem = sp - data;
+  assert(numElem > 0);
+  assert(size > 0 && data != nullptr);
   return *(sp - 1);
   //assert(*(sp-1)==T[size])) 
 }
@@ -28,6 +32,7 @@ T StackArray<T>::top()
 template <typename T>
 bool StackArray<T>::empty()
 {
+  assert(size > 0 && data != nullptr);
   return sp == data;
   //assert(sp==data);
 }
@@ -50,4 +55,14 @@ void StackArray<T>::resize()
   size += RESIZEFACTOR;
 
   delete[] olddata;
+  assert(size == newsize);
+  assert(size > 0 && data != nullptr);
+}
+
+StackArray<T>::StackArray(int s)
+{
+  size = s;
+  data = new T[size];
+  sp = data;
+  assert(size > 0 && data != nullptr);
 }
