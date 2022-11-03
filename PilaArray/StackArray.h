@@ -12,12 +12,11 @@ class StackArray: public Stack<T> {
     T* sp;
     void resize();
   public:
-    StackArray(int s): size{s},data{new T[size]}, sp{data}{};
+    StackArray(int);
     ~StackArray (){delete[] data;};
     void push(T);
     void pop();
     T top();
     bool empty();
-    bool allEquals();
 };
 #endif

@@ -1,5 +1,15 @@
 #include "StackArray.h"
 //#include "assert.h" //lib assertions
+//init non definet
+template <typename T>
+StackArray<T>::StackArray(int n)
+{
+  size = n;
+  data = new T[size];
+  sp = data;
+  //assert(size > 0 && data != nullptr);
+}
+
 template <typename T>
 void StackArray<T>::push(T e)
 {
@@ -57,13 +67,5 @@ void StackArray<T>::resize()
 
   delete[] olddata;
   assert(size == newsize);
-  assert(size > 0 && data != nullptr);
-}
-template <typename T>
-StackArray<T>::StackArray(int n)
-{
-  size = n;
-  data = new T[size];
-  sp = data;
   assert(size > 0 && data != nullptr);
 }
