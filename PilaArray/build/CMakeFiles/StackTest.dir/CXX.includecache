@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alfredo/Documentos/GitHub/TO/PilaArray/Stack.h
+
+/home/alfredo/Documentos/GitHub/TO/PilaArray/StackArray.cc
+StackArray.h
+/home/alfredo/Documentos/GitHub/TO/PilaArray/StackArray.h
+
+/home/alfredo/Documentos/GitHub/TO/PilaArray/StackArray.h
+Stack.h
+/home/alfredo/Documentos/GitHub/TO/PilaArray/Stack.h
+assert.h
+/home/alfredo/Documentos/GitHub/TO/PilaArray/assert.h
+
+/home/alfredo/Documentos/GitHub/TO/PilaArray/StackTest.cc
+StackArray.cc
+/home/alfredo/Documentos/GitHub/TO/PilaArray/StackArray.cc
+string
+-
+

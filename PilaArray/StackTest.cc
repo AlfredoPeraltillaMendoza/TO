@@ -2,12 +2,15 @@ include <gtest/gtest.h>
 #include "StackArray.cc"
 #include <string>
 
-TEST(StackArrayTestCase, InitStackArray) {
-
-  ASSERT_DEATH(StackArray<int> stack2(0), "");
+TEST(StackArrayTestCase, TestStackArray) {
 
   StackArray<int> stack1(1);
   EXPECT_TRUE(stack1.empty());
+  
+  ASSERT_DEATH(StackArray<int> stack2(0), "");
+  StackArray<std::string> stack2(1);
+  stack2.push("X");
+  EXPECT_EQ(stack2.top(),"X");
 
 }
 

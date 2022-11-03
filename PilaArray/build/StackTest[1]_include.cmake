@@ -1,0 +1,5 @@
+if(EXISTS "/home/alfredo/Documentos/GitHub/TO/PilaArray/build/StackTest[1]_tests.cmake")
+  include("/home/alfredo/Documentos/GitHub/TO/PilaArray/build/StackTest[1]_tests.cmake")
+else()
+  add_test(StackTest_NOT_BUILT StackTest_NOT_BUILT)
+endif()

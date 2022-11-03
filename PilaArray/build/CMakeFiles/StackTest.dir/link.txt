@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/StackTest.dir/StackTest.cc.o  -o StackTest  lib/libgtest_main.a lib/libgtest.a -lpthread 
