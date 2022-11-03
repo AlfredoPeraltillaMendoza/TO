@@ -196,7 +196,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=my_project
+CMAKE_PROJECT_NAME:STATIC=PilaArray
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.12.1
@@ -302,6 +302,12 @@ GTEST_HAS_ABSL:BOOL=OFF
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
+
+//Value Computed by CMake
+PilaArray_BINARY_DIR:STATIC=/home/alfredo/Documentos/GitHub/TO/PilaArray/build
+
+//Value Computed by CMake
+PilaArray_SOURCE_DIR:STATIC=/home/alfredo/Documentos/GitHub/TO/PilaArray
 
 //Path to a program.
 _Python_EXECUTABLE:FILEPATH=/usr/bin/python3.8
