@@ -5,13 +5,14 @@
 //int num_args, char** arg_strings
 int main()
 {
-StackArray<int>x(3);
+StackArray<int>x(2);
   
-  x.push(1);
-  x.push(2);
-  x.push(3);
-  x.push(4);
-  x.empty();
+    x.push(1);
+    x.push(2);
+    x.push(3);
 
+    x.pop();
+    x.top();
+    x.empty();
   return 0;
 }
