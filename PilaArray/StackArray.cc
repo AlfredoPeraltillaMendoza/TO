@@ -67,5 +67,5 @@ void StackArray<T>::resize()
 
   delete[] olddata;
   assert(size == newsize);
-  
+  assert(size > 0 && data != nullptr);
 }
