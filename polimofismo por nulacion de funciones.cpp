@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
   
-class base
+class padre
 {
 public:
     virtual void print()
@@ -13,7 +13,7 @@ public:
     { cout<< "show algo" <<endl; }
 };
    
-class derived:public base
+class derived:public padre
 {
 public:
     void print() //print() is already virtual function in derived class, we could also declared as virtual void print() explicitly
@@ -26,15 +26,12 @@ public:
 //main function
 int main() 
 {
-    base *bp;
+    padre *bp;
     derived d;
     bp = &d;
-       
     //anulación de funciones
-    bp->print(); 
-       
+    bp->print();   
     // No virtual function
     bp->show(); 
-  
     return 0;
 } 
