@@ -1,0 +1,1 @@
+'From Pharo9.0.0 of 6 September 2022 [Build information: Pharo-9.0.0+build.1580.sha.e1bb0fb7b6c4aaadd5106d19b58633c94dff1b69 (64 Bit)] on 16 November 2022 at 11:07:37.097869 pm'!!CounterTest methodsFor: 'tests' stamp: 'AlfredoPeraltilla 11/16/2022 23:04'!testInitializeself assert: Counter new count equals: 0! !

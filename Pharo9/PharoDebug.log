@@ -1,0 +1,1518 @@
+THERE_BE_DRAGONS_HERE
+Instance of Counter did not understand #count:
+16 November 2022 10:57:08.668226 pm
+
+VM: unix - x86_64 - linux-gnu - CoInterpreter * VMMaker-tonel.1 uuid: c1e676da-aaa6-0d00-9da1-e5e408c6380e Oct  5 2022
+StackToRegisterMappingCogit * VMMaker-tonel.1 uuid: c1e676da-aaa6-0d00-9da1-e5e408c6380e Oct  5 2022
+v9.0.20 - Commit: 2f226ea - Date: 2022-10-05 14:39:39 +0200
+
+Image: Pharo9.0.0 [Build information: Pharo-9.0.0+build.1580.sha.e1bb0fb7b6c4aaadd5106d19b58633c94dff1b69 (64 Bit)]
+
+Counter(Object)>>doesNotUnderstand: #count:
+	Receiver: a Counter
+	Arguments and temporary variables: 
+		aMessage: 	count: 0
+		exception: 	Instance of Counter did not understand #count:
+		resumeValue: 	nil
+	Receiver's instance variables: 
+		count: 	nil
+
+
+CounterTest>>testIncrement
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+		c: 	a Counter
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+CounterTest(TestCase)>>performTest
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[self setUp.
+	self performTest] in CounterTest(TestCase)>>runCase
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [self setUp.
+	self performTest]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		self tearDown.
+		self cleanUpInstanceVariables]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	CounterTest(TestCase)>>runCase
+		startpc: 	a CompiledBlock: [self setUp.
+	self performTest]
+		numArgs: 	0
+		receiver: 	CounterTest>>#testIncrement
+
+
+CounterTest(TestCase)>>runCase
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[aTestCase runCase] in [
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [aTestCase runCase]
+	Arguments and temporary variables: 
+		aBlock: 	[
+			"Terminated test is not considered as completed (user just closed ...etc...
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	[
+		[aTestCase runCase] ensure: [
+			"Terminated test is not cons...etc...
+		startpc: 	a CompiledBlock: [aTestCase runCase]
+		numArgs: 	0
+		receiver: 	a TestExecutionEnvironment
+
+
+[
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user...etc...
+	Arguments and temporary variables: 
+		exception: 	Exception
+		handlerAction: 	[ :err | 
+			self handleException: err 
+	]
+	Receiver's instance variables: 
+		outerContext: 	TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+		startpc: 	a CompiledBlock: [
+		[aTestCase runCase] ensure: [
+			"Terminated test...etc...
+		numArgs: 	0
+		receiver: 	a TestExecutionEnvironment
+
+
+TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+[self runTestCaseUnderWatchdog: aTestCase] in TestExecutionEnvironment>>runTestCase:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [self runTestCaseUnderWatchdog: aTestCase]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		testCompleted := true.
+		watchDogSemaphore signal.  "signal that te...etc...
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	TestExecutionEnvironment>>runTestCase:
+		startpc: 	a CompiledBlock: [self runTestCaseUnderWatchdog: aTestCase]
+		numArgs: 	0
+		receiver: 	a TestExecutionEnvironment
+
+
+TestExecutionEnvironment>>runTestCase:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+[
+		testEnv runTestCase: aTestCase] in DefaultExecutionEnvironment>>runTestCase:
+	Receiver: a DefaultExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+		testEnv: 	a TestExecutionEnvironment
+	Receiver's instance variables: 
+a DefaultExecutionEnvironment
+
+[ self value: anExecutionEnvironment.
+	anExecutionEnvironment activated.
+	aBlock value  ] in CurrentExecutionEnvironment class>>activate:for:
+	Receiver: CurrentExecutionEnvironment
+	Arguments and temporary variables: 
+		anExecutionEnvironment: 	a TestExecutionEnvironment
+		aBlock: 	[
+		testEnv runTestCase: aTestCase]
+		current: 	nil
+	Receiver's instance variables: 
+		superclass: 	ProcessLocalVariable
+		methodDict: 	a MethodDictionary(#default->CurrentExecutionEnvironment>>#default ...etc...
+		format: 	65537
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#CurrentExecutionEnvironment
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Processes'
+		soleInstance: 	a CurrentExecutionEnvironment
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ self value: anExecutionEnvironment.
+	anExecutionEnvironment activated.
+	aBlock value  ]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		self value: current.
+		anExecutionEnvironment deactivated]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	CurrentExecutionEnvironment class>>activate:for:
+		startpc: 	a CompiledBlock: [ self value: anExecutionEnvironment.
+	anExecutionEnv...etc...
+		numArgs: 	0
+		receiver: 	CurrentExecutionEnvironment
+
+
+CurrentExecutionEnvironment class>>activate:for:
+	Receiver: CurrentExecutionEnvironment
+	Arguments and temporary variables: 
+		anExecutionEnvironment: 	a TestExecutionEnvironment
+		aBlock: 	[
+		testEnv runTestCase: aTestCase]
+		current: 	nil
+	Receiver's instance variables: 
+		superclass: 	ProcessLocalVariable
+		methodDict: 	a MethodDictionary(#default->CurrentExecutionEnvironment>>#default ...etc...
+		format: 	65537
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#CurrentExecutionEnvironment
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Processes'
+		soleInstance: 	a CurrentExecutionEnvironment
+
+
+TestExecutionEnvironment(ExecutionEnvironment)>>beActiveDuring:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aBlock: 	[
+		testEnv runTestCase: aTestCase]
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+DefaultExecutionEnvironment>>runTestCase:
+	Receiver: a DefaultExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+		testEnv: 	a TestExecutionEnvironment
+	Receiver's instance variables: 
+a DefaultExecutionEnvironment
+
+CurrentExecutionEnvironment class>>runTestCase:
+	Receiver: CurrentExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		superclass: 	ProcessLocalVariable
+		methodDict: 	a MethodDictionary(#default->CurrentExecutionEnvironment>>#default ...etc...
+		format: 	65537
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#CurrentExecutionEnvironment
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Processes'
+		soleInstance: 	a CurrentExecutionEnvironment
+
+
+CounterTest(TestCase)>>runCaseManaged
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[
+	aTestCase announce: TestCaseStarted withResult: self.
+	aTestCase runCaseManaged.
+	aTestCase announce: TestCaseEnded  withResult: self.
+	"To not affect performance of big test suites following logic is not inside addPass: method"
+	errors remove: aTestCase ifAbsent: [].
+	failures remove: aTestCase ifAbsent: [].
+	self addPass: aTestCase] in TestResult>>runCaseForDebug:
+	Receiver: 1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0 passed unexpected
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		timeStamp: 	2022-11-16T22:57:08.608931-05:00
+		failures: 	a Set()
+		errors: 	an OrderedCollection(CounterTest>>#testIncrement)
+		passed: 	an OrderedCollection()
+		skipped: 	an OrderedCollection()
+
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [
+	aTestCase announce: TestCaseStarted withResult: self.
+	aTestCase runCaseManaged.
+	aTest...etc...
+	Arguments and temporary variables: 
+		exception: 	an ExceptionSet
+		handlerAction: 	[:ex | ex sunitAnnounce: aTestCase toResult: self. ex pass]
+	Receiver's instance variables: 
+		outerContext: 	TestResult>>runCaseForDebug:
+		startpc: 	a CompiledBlock: [
+	aTestCase announce: TestCaseStarted withResult: se...etc...
+		numArgs: 	0
+		receiver: 	1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error,...etc...
+
+
+TestResult>>runCaseForDebug:
+	Receiver: 1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0 passed unexpected
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		timeStamp: 	2022-11-16T22:57:08.608931-05:00
+		failures: 	a Set()
+		errors: 	an OrderedCollection(CounterTest>>#testIncrement)
+		passed: 	an OrderedCollection()
+		skipped: 	an OrderedCollection()
+
+
+[ result runCaseForDebug: self ] in CounterTest(TestCase)>>debug
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+		result: 	1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0...etc...
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ result runCaseForDebug: self ]
+	Arguments and temporary variables: 
+		aBlock: 	[ self classForTestResource resetResources: self resources.
+			result u...etc...
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	CounterTest(TestCase)>>debug
+		startpc: 	a CompiledBlock: [ result runCaseForDebug: self ]
+		numArgs: 	0
+		receiver: 	CounterTest>>#testIncrement
+
+
+CounterTest(TestCase)>>debug
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+		result: 	1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0...etc...
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		] in [
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+	Receiver: a TestSuite
+	Arguments and temporary variables: 
+		each: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		tests: 	an OrderedCollection(CounterTest>>#testIncrement)
+		resources: 	an OrderedCollection()
+		name: 	nil
+		announcer: 	an Announcer
+
+
+OrderedCollection>>do:
+	Receiver: an OrderedCollection(CounterTest>>#testIncrement)
+	Arguments and temporary variables: 
+		aBlock: 	[:each | 
+					each debug.
+					self announceTest: each.
+					self chan...etc...
+		index: 	1
+	Receiver's instance variables: 
+		array: 	an Array(CounterTest>>#testIncrement nil nil nil nil nil nil nil nil nil...etc...
+		firstIndex: 	1
+		lastIndex: 	1
+
+
+[
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+	Receiver: a TestSuite
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		tests: 	an OrderedCollection(CounterTest>>#testIncrement)
+		resources: 	an OrderedCollection()
+		name: 	nil
+		announcer: 	an Announcer
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self chan...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[ 
+		self tearDown. 
+	]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	TestSuite>>debug
+		startpc: 	a CompiledBlock: [
+		self tests do: [:each | 
+					each debug.
+					se...etc...
+		numArgs: 	0
+		receiver: 	a TestSuite
+
+
+TestSuite>>debug
+	Receiver: a TestSuite
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		tests: 	an OrderedCollection(CounterTest>>#testIncrement)
+		resources: 	an OrderedCollection()
+		name: 	nil
+		announcer: 	an Announcer
+
+
+[ :aSuite | aSuite debug ] in TestRunner>>debugSuite:
+	Receiver: a TestRunner
+	Arguments and temporary variables: 
+		aTestSuite: 	a TestSuite
+		aSuite: 	a TestSuite
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(112384000) named: Test Runner a Se...etc...
+		announcer: 	an Announcer
+		classes: 	{CounterTest}
+		classIndex: 	1
+		classesSelected: 	a Set(CounterTest)
+		failedList: 	#()
+		failedSelected: 	nil
+		errorList: 	an Array(CounterTest>>#testCountIsSetAndRead CounterTest>>#testIncre...etc...
+		errorSelected: 	CounterTest>>#testIncrement
+		lastUpdate: 	3846110215
+		result: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 errors, ...etc...
+		previousRun: 	nil
+		classPattern: 	nil
+		testAnnouncementBlock: 	[ :announcement | self updateStatus: true ]
+		packages: 	#(#'Calypso-SystemPlugins-Reflectivity-Queries-Tests-ExecutionCounter...etc...
+		packagesSelected: 	a Set(#MyCounter)
+		packagePattern: 	a RxMatcher
+		packageIndex: 	2
+
+
+FullBlockClosure(BlockClosure)>>cull:
+	Receiver: [ :aSuite | aSuite debug ]
+	Arguments and temporary variables: 
+		anArg: 	a TestSuite
+	Receiver's instance variables: 
+		outerContext: 	TestRunner>>debugSuite:
+		startpc: 	a CompiledBlock: [ :aSuite | aSuite debug ]
+		numArgs: 	1
+		receiver: 	a TestRunner
+
+
+FullBlockClosure(BlockClosure)>>cull:cull:
+	Receiver: [ :aSuite | aSuite debug ]
+	Arguments and temporary variables: 
+		firstArg: 	a TestSuite
+		secondArg: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 error...etc...
+	Receiver's instance variables: 
+		outerContext: 	TestRunner>>debugSuite:
+		startpc: 	a CompiledBlock: [ :aSuite | aSuite debug ]
+		numArgs: 	1
+		receiver: 	a TestRunner
+
+
+[ aBlock cull: aTestSuite cull: result  ] in TestRunner>>executeSuite:as:
+	Receiver: a TestRunner
+	Arguments and temporary variables: 
+		aTestSuite: 	a TestSuite
+		aBlock: 	[ :aSuite | aSuite debug ]
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(112384000) named: Test Runner a Se...etc...
+		announcer: 	an Announcer
+		classes: 	{CounterTest}
+		classIndex: 	1
+		classesSelected: 	a Set(CounterTest)
+		failedList: 	#()
+		failedSelected: 	nil
+		errorList: 	an Array(CounterTest>>#testCountIsSetAndRead CounterTest>>#testIncre...etc...
+		errorSelected: 	CounterTest>>#testIncrement
+		lastUpdate: 	3846110215
+		result: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 errors, ...etc...
+		previousRun: 	nil
+		classPattern: 	nil
+		testAnnouncementBlock: 	[ :announcement | self updateStatus: true ]
+		packages: 	#(#'Calypso-SystemPlugins-Reflectivity-Queries-Tests-ExecutionCounter...etc...
+		packagesSelected: 	a Set(#MyCounter)
+		packagePattern: 	a RxMatcher
+		packageIndex: 	2
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ aBlock cull: aTestSuite cull: result  ]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		aTestSuite unsubscribe:TestAnnouncement.
+	]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	TestRunner>>executeSuite:as:
+		startpc: 	a CompiledBlock: [ aBlock cull: aTestSuite cull: result  ]
+		numArgs: 	0
+		receiver: 	a TestRunner
+
+
+TestRunner>>executeSuite:as:
+	Receiver: a TestRunner
+	Arguments and temporary variables: 
+		aTestSuite: 	a TestSuite
+		aBlock: 	[ :aSuite | aSuite debug ]
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(112384000) named: Test Runner a Se...etc...
+		announcer: 	an Announcer
+		classes: 	{CounterTest}
+		classIndex: 	1
+		classesSelected: 	a Set(CounterTest)
+		failedList: 	#()
+		failedSelected: 	nil
+		errorList: 	an Array(CounterTest>>#testCountIsSetAndRead CounterTest>>#testIncre...etc...
+		errorSelected: 	CounterTest>>#testIncrement
+		lastUpdate: 	3846110215
+		result: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 errors, ...etc...
+		previousRun: 	nil
+		classPattern: 	nil
+		testAnnouncementBlock: 	[ :announcement | self updateStatus: true ]
+		packages: 	#(#'Calypso-SystemPlugins-Reflectivity-Queries-Tests-ExecutionCounter...etc...
+		packagesSelected: 	a Set(#MyCounter)
+		packagePattern: 	a RxMatcher
+		packageIndex: 	2
+
+
+
+--- The full stack ---
+Counter(Object)>>doesNotUnderstand: #count:
+CounterTest>>testIncrement
+CounterTest(TestCase)>>performTest
+[self setUp.
+	self performTest] in CounterTest(TestCase)>>runCase
+FullBlockClosure(BlockClosure)>>ensure:
+CounterTest(TestCase)>>runCase
+[aTestCase runCase] in [
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+FullBlockClosure(BlockClosure)>>ensure:
+[
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+FullBlockClosure(BlockClosure)>>on:do:
+TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+[self runTestCaseUnderWatchdog: aTestCase] in TestExecutionEnvironment>>runTestCase:
+FullBlockClosure(BlockClosure)>>ensure:
+TestExecutionEnvironment>>runTestCase:
+[
+		testEnv runTestCase: aTestCase] in DefaultExecutionEnvironment>>runTestCase:
+[ self value: anExecutionEnvironment.
+	anExecutionEnvironment activated.
+	aBlock value  ] in CurrentExecutionEnvironment class>>activate:for:
+FullBlockClosure(BlockClosure)>>ensure:
+CurrentExecutionEnvironment class>>activate:for:
+TestExecutionEnvironment(ExecutionEnvironment)>>beActiveDuring:
+DefaultExecutionEnvironment>>runTestCase:
+CurrentExecutionEnvironment class>>runTestCase:
+CounterTest(TestCase)>>runCaseManaged
+[
+	aTestCase announce: TestCaseStarted withResult: self.
+	aTestCase runCaseManaged.
+	aTestCase announce: TestCaseEnded  withResult: self.
+	"To not affect performance of big test suites following logic is not inside addPass: method"
+	errors remove: aTestCase ifAbsent: [].
+	failures remove: aTestCase ifAbsent: [].
+	self addPass: aTestCase] in TestResult>>runCaseForDebug:
+FullBlockClosure(BlockClosure)>>on:do:
+TestResult>>runCaseForDebug:
+[ result runCaseForDebug: self ] in CounterTest(TestCase)>>debug
+FullBlockClosure(BlockClosure)>>ensure:
+CounterTest(TestCase)>>debug
+[:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		] in [
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+OrderedCollection>>do:
+[
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+FullBlockClosure(BlockClosure)>>ensure:
+TestSuite>>debug
+[ :aSuite | aSuite debug ] in TestRunner>>debugSuite:
+FullBlockClosure(BlockClosure)>>cull:
+FullBlockClosure(BlockClosure)>>cull:cull:
+[ aBlock cull: aTestSuite cull: result  ] in TestRunner>>executeSuite:as:
+FullBlockClosure(BlockClosure)>>ensure:
+TestRunner>>executeSuite:as:
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+TestRunner>>debugSuite:
+TestRunner>>debug:
+TestRunner>>errorSelected:
+PluggableListMorph>>changeModelSelection:
+PluggableListMorph>>mouseUpOnSingle:
+PluggableListMorph>>mouseUp:
+PluggableListMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+PluggableListMorph(Morph)>>handleEvent:
+MorphicEventDispatcher>>dispatchDefault:with:
+MorphicEventDispatcher>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+[ ^ anEvent sentTo: self ] in MorphicEventDispatcher>>dispatchEvent:with:
+FullBlockClosure(BlockClosure)>>ensure:
+MorphicEventDispatcher>>dispatchEvent:with:
+PluggableListMorph(Morph)>>processEvent:using:
+PluggableListMorph(Morph)>>processEvent:
+PluggableListMorph>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear:
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [ self extraWorldList ].
+		extraWorldsToDraw do: [:world |
+			world doOneCycle.
+		].
+
+		(self currentWorld isNotNil and: [(extraWorldsToDraw includes: self currentWorld) not]) ifTrue: [
+			self currentWorld doOneCycle.
+		]
+	] in WorldMorph class>>doOneCycle
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
+MorphicRenderLoop>>doOneCycleWhile:
+[
+		MorphicRenderLoop new doOneCycleWhile: [ true ]
+	] in MorphicUIManager>>spawnNewProcess
+[self value.
+			Processor terminateActive] in FullBlockClosure(BlockClosure)>>newProcess
+-------------------------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+Instance of Counter did not understand #count:
+16 November 2022 10:57:08.717651 pm
+
+VM: unix - x86_64 - linux-gnu - CoInterpreter * VMMaker-tonel.1 uuid: c1e676da-aaa6-0d00-9da1-e5e408c6380e Oct  5 2022
+StackToRegisterMappingCogit * VMMaker-tonel.1 uuid: c1e676da-aaa6-0d00-9da1-e5e408c6380e Oct  5 2022
+v9.0.20 - Commit: 2f226ea - Date: 2022-10-05 14:39:39 +0200
+
+Image: Pharo9.0.0 [Build information: Pharo-9.0.0+build.1580.sha.e1bb0fb7b6c4aaadd5106d19b58633c94dff1b69 (64 Bit)]
+
+Counter(Object)>>doesNotUnderstand: #count:
+	Receiver: a Counter
+	Arguments and temporary variables: 
+		aMessage: 	count: 0
+		exception: 	Instance of Counter did not understand #count:
+		resumeValue: 	nil
+	Receiver's instance variables: 
+		count: 	nil
+
+
+CounterTest>>testIncrement
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+		c: 	a Counter
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+CounterTest(TestCase)>>performTest
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[self setUp.
+	self performTest] in CounterTest(TestCase)>>runCase
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [self setUp.
+	self performTest]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		self tearDown.
+		self cleanUpInstanceVariables]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	CounterTest(TestCase)>>runCase
+		startpc: 	a CompiledBlock: [self setUp.
+	self performTest]
+		numArgs: 	0
+		receiver: 	CounterTest>>#testIncrement
+
+
+CounterTest(TestCase)>>runCase
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[aTestCase runCase] in [
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [aTestCase runCase]
+	Arguments and temporary variables: 
+		aBlock: 	[
+			"Terminated test is not considered as completed (user just closed ...etc...
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	[
+		[aTestCase runCase] ensure: [
+			"Terminated test is not cons...etc...
+		startpc: 	a CompiledBlock: [aTestCase runCase]
+		numArgs: 	0
+		receiver: 	a TestExecutionEnvironment
+
+
+[
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user...etc...
+	Arguments and temporary variables: 
+		exception: 	Exception
+		handlerAction: 	[ :err | 
+			self handleException: err 
+	]
+	Receiver's instance variables: 
+		outerContext: 	TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+		startpc: 	a CompiledBlock: [
+		[aTestCase runCase] ensure: [
+			"Terminated test...etc...
+		numArgs: 	0
+		receiver: 	a TestExecutionEnvironment
+
+
+TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+[self runTestCaseUnderWatchdog: aTestCase] in TestExecutionEnvironment>>runTestCase:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [self runTestCaseUnderWatchdog: aTestCase]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		testCompleted := true.
+		watchDogSemaphore signal.  "signal that te...etc...
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	TestExecutionEnvironment>>runTestCase:
+		startpc: 	a CompiledBlock: [self runTestCaseUnderWatchdog: aTestCase]
+		numArgs: 	0
+		receiver: 	a TestExecutionEnvironment
+
+
+TestExecutionEnvironment>>runTestCase:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+[
+		testEnv runTestCase: aTestCase] in DefaultExecutionEnvironment>>runTestCase:
+	Receiver: a DefaultExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+		testEnv: 	a TestExecutionEnvironment
+	Receiver's instance variables: 
+a DefaultExecutionEnvironment
+
+[ self value: anExecutionEnvironment.
+	anExecutionEnvironment activated.
+	aBlock value  ] in CurrentExecutionEnvironment class>>activate:for:
+	Receiver: CurrentExecutionEnvironment
+	Arguments and temporary variables: 
+		anExecutionEnvironment: 	a TestExecutionEnvironment
+		aBlock: 	[
+		testEnv runTestCase: aTestCase]
+		current: 	nil
+	Receiver's instance variables: 
+		superclass: 	ProcessLocalVariable
+		methodDict: 	a MethodDictionary(#default->CurrentExecutionEnvironment>>#default ...etc...
+		format: 	65537
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#CurrentExecutionEnvironment
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Processes'
+		soleInstance: 	a CurrentExecutionEnvironment
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ self value: anExecutionEnvironment.
+	anExecutionEnvironment activated.
+	aBlock value  ]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		self value: current.
+		anExecutionEnvironment deactivated]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	CurrentExecutionEnvironment class>>activate:for:
+		startpc: 	a CompiledBlock: [ self value: anExecutionEnvironment.
+	anExecutionEnv...etc...
+		numArgs: 	0
+		receiver: 	CurrentExecutionEnvironment
+
+
+CurrentExecutionEnvironment class>>activate:for:
+	Receiver: CurrentExecutionEnvironment
+	Arguments and temporary variables: 
+		anExecutionEnvironment: 	a TestExecutionEnvironment
+		aBlock: 	[
+		testEnv runTestCase: aTestCase]
+		current: 	nil
+	Receiver's instance variables: 
+		superclass: 	ProcessLocalVariable
+		methodDict: 	a MethodDictionary(#default->CurrentExecutionEnvironment>>#default ...etc...
+		format: 	65537
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#CurrentExecutionEnvironment
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Processes'
+		soleInstance: 	a CurrentExecutionEnvironment
+
+
+TestExecutionEnvironment(ExecutionEnvironment)>>beActiveDuring:
+	Receiver: a TestExecutionEnvironment
+	Arguments and temporary variables: 
+		aBlock: 	[
+		testEnv runTestCase: aTestCase]
+	Receiver's instance variables: 
+		watchDogProcess: 	a Process in [self schedule.
+	"It is critical that the followi...etc...
+		watchDogSemaphore: 	a Semaphore(a Process in [self schedule.
+	"It is critical th...etc...
+		testCase: 	CounterTest>>#testIncrement
+		maxTimeForTest: 	0:00:00:10
+		testCompleted: 	false
+		services: 	an OrderedCollection(a ProcessMonitorTestService)
+		mainTestProcess: 	a Process in nil
+
+
+DefaultExecutionEnvironment>>runTestCase:
+	Receiver: a DefaultExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+		testEnv: 	a TestExecutionEnvironment
+	Receiver's instance variables: 
+a DefaultExecutionEnvironment
+
+CurrentExecutionEnvironment class>>runTestCase:
+	Receiver: CurrentExecutionEnvironment
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		superclass: 	ProcessLocalVariable
+		methodDict: 	a MethodDictionary(#default->CurrentExecutionEnvironment>>#default ...etc...
+		format: 	65537
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#CurrentExecutionEnvironment
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Processes'
+		soleInstance: 	a CurrentExecutionEnvironment
+
+
+CounterTest(TestCase)>>runCaseManaged
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[
+	aTestCase announce: TestCaseStarted withResult: self.
+	aTestCase runCaseManaged.
+	aTestCase announce: TestCaseEnded  withResult: self.
+	"To not affect performance of big test suites following logic is not inside addPass: method"
+	errors remove: aTestCase ifAbsent: [].
+	failures remove: aTestCase ifAbsent: [].
+	self addPass: aTestCase] in TestResult>>runCaseForDebug:
+	Receiver: 1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0 passed unexpected
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		timeStamp: 	2022-11-16T22:57:08.608931-05:00
+		failures: 	a Set()
+		errors: 	an OrderedCollection(CounterTest>>#testIncrement)
+		passed: 	an OrderedCollection()
+		skipped: 	an OrderedCollection()
+
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [
+	aTestCase announce: TestCaseStarted withResult: self.
+	aTestCase runCaseManaged.
+	aTest...etc...
+	Arguments and temporary variables: 
+		exception: 	an ExceptionSet
+		handlerAction: 	[:ex | ex sunitAnnounce: aTestCase toResult: self. ex pass]
+	Receiver's instance variables: 
+		outerContext: 	TestResult>>runCaseForDebug:
+		startpc: 	a CompiledBlock: [
+	aTestCase announce: TestCaseStarted withResult: se...etc...
+		numArgs: 	0
+		receiver: 	1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error,...etc...
+
+
+TestResult>>runCaseForDebug:
+	Receiver: 1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0 passed unexpected
+	Arguments and temporary variables: 
+		aTestCase: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		timeStamp: 	2022-11-16T22:57:08.608931-05:00
+		failures: 	a Set()
+		errors: 	an OrderedCollection(CounterTest>>#testIncrement)
+		passed: 	an OrderedCollection()
+		skipped: 	an OrderedCollection()
+
+
+[ result runCaseForDebug: self ] in CounterTest(TestCase)>>debug
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+		result: 	1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0...etc...
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ result runCaseForDebug: self ]
+	Arguments and temporary variables: 
+		aBlock: 	[ self classForTestResource resetResources: self resources.
+			result u...etc...
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	CounterTest(TestCase)>>debug
+		startpc: 	a CompiledBlock: [ result runCaseForDebug: self ]
+		numArgs: 	0
+		receiver: 	CounterTest>>#testIncrement
+
+
+CounterTest(TestCase)>>debug
+	Receiver: CounterTest>>#testIncrement
+	Arguments and temporary variables: 
+		result: 	1 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 1 error, 0...etc...
+	Receiver's instance variables: 
+		testSelector: 	#testIncrement
+		expectedFails: 	#()
+
+
+[:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		] in [
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+	Receiver: a TestSuite
+	Arguments and temporary variables: 
+		each: 	CounterTest>>#testIncrement
+	Receiver's instance variables: 
+		tests: 	an OrderedCollection(CounterTest>>#testIncrement)
+		resources: 	an OrderedCollection()
+		name: 	nil
+		announcer: 	an Announcer
+
+
+OrderedCollection>>do:
+	Receiver: an OrderedCollection(CounterTest>>#testIncrement)
+	Arguments and temporary variables: 
+		aBlock: 	[:each | 
+					each debug.
+					self announceTest: each.
+					self chan...etc...
+		index: 	1
+	Receiver's instance variables: 
+		array: 	an Array(CounterTest>>#testIncrement nil nil nil nil nil nil nil nil nil...etc...
+		firstIndex: 	1
+		lastIndex: 	1
+
+
+[
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+	Receiver: a TestSuite
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		tests: 	an OrderedCollection(CounterTest>>#testIncrement)
+		resources: 	an OrderedCollection()
+		name: 	nil
+		announcer: 	an Announcer
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self chan...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[ 
+		self tearDown. 
+	]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	TestSuite>>debug
+		startpc: 	a CompiledBlock: [
+		self tests do: [:each | 
+					each debug.
+					se...etc...
+		numArgs: 	0
+		receiver: 	a TestSuite
+
+
+TestSuite>>debug
+	Receiver: a TestSuite
+	Arguments and temporary variables: 
+x
+	Receiver's instance variables: 
+		tests: 	an OrderedCollection(CounterTest>>#testIncrement)
+		resources: 	an OrderedCollection()
+		name: 	nil
+		announcer: 	an Announcer
+
+
+[ :aSuite | aSuite debug ] in TestRunner>>debugSuite:
+	Receiver: a TestRunner
+	Arguments and temporary variables: 
+		aTestSuite: 	a TestSuite
+		aSuite: 	a TestSuite
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(112384000) named: Test Runner a Se...etc...
+		announcer: 	an Announcer
+		classes: 	{CounterTest}
+		classIndex: 	1
+		classesSelected: 	a Set(CounterTest)
+		failedList: 	#()
+		failedSelected: 	nil
+		errorList: 	an Array(CounterTest>>#testCountIsSetAndRead CounterTest>>#testIncre...etc...
+		errorSelected: 	CounterTest>>#testIncrement
+		lastUpdate: 	3846110215
+		result: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 errors, ...etc...
+		previousRun: 	nil
+		classPattern: 	nil
+		testAnnouncementBlock: 	[ :announcement | self updateStatus: true ]
+		packages: 	#(#'Calypso-SystemPlugins-Reflectivity-Queries-Tests-ExecutionCounter...etc...
+		packagesSelected: 	a Set(#MyCounter)
+		packagePattern: 	a RxMatcher
+		packageIndex: 	2
+
+
+FullBlockClosure(BlockClosure)>>cull:
+	Receiver: [ :aSuite | aSuite debug ]
+	Arguments and temporary variables: 
+		anArg: 	a TestSuite
+	Receiver's instance variables: 
+		outerContext: 	TestRunner>>debugSuite:
+		startpc: 	a CompiledBlock: [ :aSuite | aSuite debug ]
+		numArgs: 	1
+		receiver: 	a TestRunner
+
+
+FullBlockClosure(BlockClosure)>>cull:cull:
+	Receiver: [ :aSuite | aSuite debug ]
+	Arguments and temporary variables: 
+		firstArg: 	a TestSuite
+		secondArg: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 error...etc...
+	Receiver's instance variables: 
+		outerContext: 	TestRunner>>debugSuite:
+		startpc: 	a CompiledBlock: [ :aSuite | aSuite debug ]
+		numArgs: 	1
+		receiver: 	a TestRunner
+
+
+[ aBlock cull: aTestSuite cull: result  ] in TestRunner>>executeSuite:as:
+	Receiver: a TestRunner
+	Arguments and temporary variables: 
+		aTestSuite: 	a TestSuite
+		aBlock: 	[ :aSuite | aSuite debug ]
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(112384000) named: Test Runner a Se...etc...
+		announcer: 	an Announcer
+		classes: 	{CounterTest}
+		classIndex: 	1
+		classesSelected: 	a Set(CounterTest)
+		failedList: 	#()
+		failedSelected: 	nil
+		errorList: 	an Array(CounterTest>>#testCountIsSetAndRead CounterTest>>#testIncre...etc...
+		errorSelected: 	CounterTest>>#testIncrement
+		lastUpdate: 	3846110215
+		result: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 errors, ...etc...
+		previousRun: 	nil
+		classPattern: 	nil
+		testAnnouncementBlock: 	[ :announcement | self updateStatus: true ]
+		packages: 	#(#'Calypso-SystemPlugins-Reflectivity-Queries-Tests-ExecutionCounter...etc...
+		packagesSelected: 	a Set(#MyCounter)
+		packagePattern: 	a RxMatcher
+		packageIndex: 	2
+
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ aBlock cull: aTestSuite cull: result  ]
+	Arguments and temporary variables: 
+		aBlock: 	[
+		aTestSuite unsubscribe:TestAnnouncement.
+	]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	TestRunner>>executeSuite:as:
+		startpc: 	a CompiledBlock: [ aBlock cull: aTestSuite cull: result  ]
+		numArgs: 	0
+		receiver: 	a TestRunner
+
+
+TestRunner>>executeSuite:as:
+	Receiver: a TestRunner
+	Arguments and temporary variables: 
+		aTestSuite: 	a TestSuite
+		aBlock: 	[ :aSuite | aSuite debug ]
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(112384000) named: Test Runner a Se...etc...
+		announcer: 	an Announcer
+		classes: 	{CounterTest}
+		classIndex: 	1
+		classesSelected: 	a Set(CounterTest)
+		failedList: 	#()
+		failedSelected: 	nil
+		errorList: 	an Array(CounterTest>>#testCountIsSetAndRead CounterTest>>#testIncre...etc...
+		errorSelected: 	CounterTest>>#testIncrement
+		lastUpdate: 	3846110215
+		result: 	2 ran, 0 passed, 0 skipped, 0 expected failures, 0 failures, 2 errors, ...etc...
+		previousRun: 	nil
+		classPattern: 	nil
+		testAnnouncementBlock: 	[ :announcement | self updateStatus: true ]
+		packages: 	#(#'Calypso-SystemPlugins-Reflectivity-Queries-Tests-ExecutionCounter...etc...
+		packagesSelected: 	a Set(#MyCounter)
+		packagePattern: 	a RxMatcher
+		packageIndex: 	2
+
+
+
+--- The full stack ---
+Counter(Object)>>doesNotUnderstand: #count:
+CounterTest>>testIncrement
+CounterTest(TestCase)>>performTest
+[self setUp.
+	self performTest] in CounterTest(TestCase)>>runCase
+FullBlockClosure(BlockClosure)>>ensure:
+CounterTest(TestCase)>>runCase
+[aTestCase runCase] in [
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+FullBlockClosure(BlockClosure)>>ensure:
+[
+		[aTestCase runCase] ensure: [
+			"Terminated test is not considered as completed (user just closed a debugger for example)"
+			mainTestProcess isTerminating ifFalse: [ 
+				self handleCompletedTest ]]
+	] in TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+FullBlockClosure(BlockClosure)>>on:do:
+TestExecutionEnvironment>>runTestCaseUnderWatchdog:
+[self runTestCaseUnderWatchdog: aTestCase] in TestExecutionEnvironment>>runTestCase:
+FullBlockClosure(BlockClosure)>>ensure:
+TestExecutionEnvironment>>runTestCase:
+[
+		testEnv runTestCase: aTestCase] in DefaultExecutionEnvironment>>runTestCase:
+[ self value: anExecutionEnvironment.
+	anExecutionEnvironment activated.
+	aBlock value  ] in CurrentExecutionEnvironment class>>activate:for:
+FullBlockClosure(BlockClosure)>>ensure:
+CurrentExecutionEnvironment class>>activate:for:
+TestExecutionEnvironment(ExecutionEnvironment)>>beActiveDuring:
+DefaultExecutionEnvironment>>runTestCase:
+CurrentExecutionEnvironment class>>runTestCase:
+CounterTest(TestCase)>>runCaseManaged
+[
+	aTestCase announce: TestCaseStarted withResult: self.
+	aTestCase runCaseManaged.
+	aTestCase announce: TestCaseEnded  withResult: self.
+	"To not affect performance of big test suites following logic is not inside addPass: method"
+	errors remove: aTestCase ifAbsent: [].
+	failures remove: aTestCase ifAbsent: [].
+	self addPass: aTestCase] in TestResult>>runCaseForDebug:
+FullBlockClosure(BlockClosure)>>on:do:
+TestResult>>runCaseForDebug:
+[ result runCaseForDebug: self ] in CounterTest(TestCase)>>debug
+FullBlockClosure(BlockClosure)>>ensure:
+CounterTest(TestCase)>>debug
+[:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		] in [
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+OrderedCollection>>do:
+[
+		self tests do: [:each | 
+					each debug.
+					self announceTest: each.
+					self changed: each.
+		]
+	] in TestSuite>>debug
+FullBlockClosure(BlockClosure)>>ensure:
+TestSuite>>debug
+[ :aSuite | aSuite debug ] in TestRunner>>debugSuite:
+FullBlockClosure(BlockClosure)>>cull:
+FullBlockClosure(BlockClosure)>>cull:cull:
+[ aBlock cull: aTestSuite cull: result  ] in TestRunner>>executeSuite:as:
+FullBlockClosure(BlockClosure)>>ensure:
+TestRunner>>executeSuite:as:
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+TestRunner>>debugSuite:
+TestRunner>>debug:
+TestRunner>>errorSelected:
+PluggableListMorph>>changeModelSelection:
+PluggableListMorph>>mouseUpOnSingle:
+PluggableListMorph>>mouseUp:
+PluggableListMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+PluggableListMorph(Morph)>>handleEvent:
+MorphicEventDispatcher>>dispatchDefault:with:
+MorphicEventDispatcher>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+[ ^ anEvent sentTo: self ] in MorphicEventDispatcher>>dispatchEvent:with:
+FullBlockClosure(BlockClosure)>>ensure:
+MorphicEventDispatcher>>dispatchEvent:with:
+PluggableListMorph(Morph)>>processEvent:using:
+PluggableListMorph(Morph)>>processEvent:
+PluggableListMorph>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear:
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [ self extraWorldList ].
+		extraWorldsToDraw do: [:world |
+			world doOneCycle.
+		].
+
+		(self currentWorld isNotNil and: [(extraWorldsToDraw includes: self currentWorld) not]) ifTrue: [
+			self currentWorld doOneCycle.
+		]
+	] in WorldMorph class>>doOneCycle
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
+MorphicRenderLoop>>doOneCycleWhile:
+[
+		MorphicRenderLoop new doOneCycleWhile: [ true ]
+	] in MorphicUIManager>>spawnNewProcess
+[self value.
+			Processor terminateActive] in FullBlockClosure(BlockClosure)>>newProcess
+-------------------------------------------------------------------------------
+

@@ -1,0 +1,1 @@
+'From Pharo9.0.0 of 6 September 2022 [Build information: Pharo-9.0.0+build.1580.sha.e1bb0fb7b6c4aaadd5106d19b58633c94dff1b69 (64 Bit)] on 16 November 2022 at 11:07:34.204867 pm'!!CounterTest methodsFor: 'testIncrement' stamp: 'AlfredoPeraltilla 11/16/2022 22:53'!testIncrement|c|c := Counter new.c count: 0 ; increment; increment.self assert: c count equals: 2! !

@@ -1,0 +1,1 @@
+'From Pharo9.0.0 of 6 September 2022 [Build information: Pharo-9.0.0+build.1580.sha.e1bb0fb7b6c4aaadd5106d19b58633c94dff1b69 (64 Bit)] on 16 November 2022 at 11:06:42.05687 pm'!!Counter methodsFor: 'accessing' stamp: 'AlfredoPeraltilla 11/16/2022 22:56'!increment	count := count +1! !
