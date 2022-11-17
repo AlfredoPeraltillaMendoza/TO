@@ -1,4 +1,4 @@
-//info clase derivada tiene una definición para una de las funciones miembro de la clase base
+//info por funciones polimorfism funciones 
   
 #include <bits/stdc++.h>
 using namespace std;
@@ -16,7 +16,7 @@ public:
 class derived:public padre
 {
 public:
-    void print() //print() is already virtual function in derived class, we could also declared as virtual void print() explicitly
+    void print() //print() is already virtual function
     { cout<< "print derived class" <<endl; }
    
     void show()
